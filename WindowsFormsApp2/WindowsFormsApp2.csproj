@@ -51,6 +51,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -119,6 +120,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\moneyScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingCartScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-area-text-symbol-brand-calendar-5ab0d18033f3f2.6576950515215374082128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\widokKalendarz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\widokLiniowy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\widokKolowy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\widokKolumnowy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SettingIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logOutIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
