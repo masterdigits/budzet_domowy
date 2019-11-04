@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp2
 {
     public partial class panelLogowania : Form
     {
+        SqlCommand cmd;
+        SqlConnection con;
+        SqlDataAdapter da;
         public panelLogowania()
         {
             InitializeComponent();
@@ -47,6 +52,52 @@ namespace WindowsFormsApp2
         }
 
         private void buttonZaloguj_Click(object sender, EventArgs e)
+        {
+
+            SqlConnection con = new SqlConnection(@" Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\mkkar\Desktop\Budzet\budzet_domowy\WindowsFormsApp2\baza.mdf; Integrated Security = True; Connect Timeout = 30");
+            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from Uzytkownicy where login ='" + textBoxLogin1.Text + "' and haslo='" + textBoxHaslo1.Text + "'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1")
+            {
+                panelGlowny PG = new panelGlowny();
+                this.Hide();
+                PG.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Błąd logowania do bazy danych!");
+            }
+
+        }
+
+        private void buttonRejestracja_Click(object sender, EventArgs e)
+        {
+            con = new SqlConnection(@" Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\mkkar\Desktop\Budzet\budzet_domowy\WindowsFormsApp2\baza.mdf; Integrated Security = True; Connect Timeout = 30");
+            con.Open();
+            cmd = new SqlCommand("Insert INTO Uzytkownicy(imie, nazwisko, login, haslo, email) values (@imie, @nazwisko, @login, @haslo, @email)", con);
+            cmd.Parameters.AddWithValue("@imie", textBoxImie.Text);
+            cmd.Parameters.AddWithValue("@nazwisko", textBoxNazwisko.Text);
+            cmd.Parameters.AddWithValue("@login", textBoxLogin.Text);
+            cmd.Parameters.AddWithValue("@haslo", textBoxHaslo.Text);
+            cmd.Parameters.AddWithValue("@email", textBoxEmail.Text);
+            cmd.ExecuteNonQuery();
+
+            // string userText = textBoxULogin.Text;
+            //string passText = textBoxHaslo.Text;
+            /*
+             * 
+             */
+            //string stRole = "administrator"; 
+            MessageBox.Show("Udana rejestracja");
+
+
+            panelLogowania PL = new panelLogowania();
+            this.Hide();
+            PL.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             panelGlowny PG = new panelGlowny();
             this.Hide();

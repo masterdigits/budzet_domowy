@@ -52,6 +52,7 @@
             this.labelHaslo1 = new System.Windows.Forms.Label();
             this.textBoxLogin1 = new System.Windows.Forms.TextBox();
             this.labelLogin1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxRejestracja.SuspendLayout();
             this.groupBoxLogin.SuspendLayout();
             this.SuspendLayout();
@@ -199,12 +200,14 @@
             this.buttonRejestracja.TabIndex = 2;
             this.buttonRejestracja.Text = "Zarejestruj";
             this.buttonRejestracja.UseVisualStyleBackColor = false;
+            this.buttonRejestracja.Click += new System.EventHandler(this.buttonRejestracja_Click);
             // 
             // textBoxHaslo
             // 
             this.textBoxHaslo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBoxHaslo.Location = new System.Drawing.Point(36, 119);
             this.textBoxHaslo.Name = "textBoxHaslo";
+            this.textBoxHaslo.PasswordChar = '*';
             this.textBoxHaslo.Size = new System.Drawing.Size(273, 34);
             this.textBoxHaslo.TabIndex = 1;
             // 
@@ -276,6 +279,7 @@
             this.textBoxHaslo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBoxHaslo1.Location = new System.Drawing.Point(28, 119);
             this.textBoxHaslo1.Name = "textBoxHaslo1";
+            this.textBoxHaslo1.PasswordChar = '*';
             this.textBoxHaslo1.Size = new System.Drawing.Size(273, 34);
             this.textBoxHaslo1.TabIndex = 3;
             // 
@@ -309,17 +313,28 @@
             this.labelLogin1.TabIndex = 0;
             this.labelLogin1.Text = "Login";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(196, 472);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 70);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Klik";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panelLogowania
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1000, 778);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBoxLogin);
             this.Controls.Add(this.groupBoxRejestracja);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "panelLogowania";
-            this.Text = "Form1";
+            this.Text = "Zaloguj sie";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             this.groupBoxRejestracja.ResumeLayout(false);
@@ -356,6 +371,7 @@
         private System.Windows.Forms.Label labelHaslo1;
         private System.Windows.Forms.TextBox textBoxLogin1;
         private System.Windows.Forms.Label labelLogin1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
