@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea44 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend44 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series44 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.splitContainerGlowny = new System.Windows.Forms.SplitContainer();
             this.splitContainerMenuBoczne = new System.Windows.Forms.SplitContainer();
             this.buttonDodajWydatek = new System.Windows.Forms.Button();
             this.buttonDodajPrzychód = new System.Windows.Forms.Button();
             this.splitContainerMenuBoczneWidok = new System.Windows.Forms.SplitContainer();
             this.comboBoxKategoria = new System.Windows.Forms.ComboBox();
-            this.checkBoxCykliczny = new System.Windows.Forms.CheckBox();
             this.buttonReset = new System.Windows.Forms.Button();
             this.buttonZapisz = new System.Windows.Forms.Button();
             this.richTextBoxDodaj = new System.Windows.Forms.RichTextBox();
@@ -49,8 +48,6 @@
             this.buttonWidokKalendarz = new System.Windows.Forms.Button();
             this.buttonWidokLiniowy = new System.Windows.Forms.Button();
             this.splitContainerFiltr = new System.Windows.Forms.SplitContainer();
-            this.buttonPowiadomienia = new System.Windows.Forms.Button();
-            this.comboBoxFiltrUzytkownik = new System.Windows.Forms.ComboBox();
             this.textBoxSzukajWOpisie = new System.Windows.Forms.TextBox();
             this.buttonWyszukaj = new System.Windows.Forms.Button();
             this.labelSzukajWOpisie = new System.Windows.Forms.Label();
@@ -72,13 +69,15 @@
             this.chartGlowny = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.listViewGlowne = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnUżytkownicy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnOperacja = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnOperacj = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnKwota = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnData = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnKategoria = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnOpis = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.listViewGlowny = new System.Windows.Forms.ListView();
+            this.checkBoxCykliczny = new System.Windows.Forms.CheckBox();
+            this.pictureBoxWyloguj = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUstawienia = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerGlowny)).BeginInit();
             this.splitContainerGlowny.Panel1.SuspendLayout();
             this.splitContainerGlowny.Panel2.SuspendLayout();
@@ -99,6 +98,8 @@
             this.splitContainerSaldo.Panel1.SuspendLayout();
             this.splitContainerSaldo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartGlowny)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWyloguj)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUstawienia)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainerGlowny
@@ -117,7 +118,7 @@
             // splitContainerGlowny.Panel2
             // 
             this.splitContainerGlowny.Panel2.Controls.Add(this.splitContainerFiltr);
-            this.splitContainerGlowny.Size = new System.Drawing.Size(1908, 945);
+            this.splitContainerGlowny.Size = new System.Drawing.Size(1345, 832);
             this.splitContainerGlowny.SplitterDistance = 350;
             this.splitContainerGlowny.TabIndex = 0;
             // 
@@ -140,7 +141,7 @@
             // splitContainerMenuBoczne.Panel2
             // 
             this.splitContainerMenuBoczne.Panel2.Controls.Add(this.splitContainerMenuBoczneWidok);
-            this.splitContainerMenuBoczne.Size = new System.Drawing.Size(350, 945);
+            this.splitContainerMenuBoczne.Size = new System.Drawing.Size(350, 832);
             this.splitContainerMenuBoczne.SplitterDistance = 200;
             this.splitContainerMenuBoczne.TabIndex = 0;
             // 
@@ -148,12 +149,12 @@
             // 
             this.buttonDodajWydatek.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDodajWydatek.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonDodajWydatek.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonDodajWydatek.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.buttonDodajWydatek.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDodajWydatek.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonDodajWydatek.Location = new System.Drawing.Point(3, 136);
+            this.buttonDodajWydatek.Location = new System.Drawing.Point(54, 140);
             this.buttonDodajWydatek.Name = "buttonDodajWydatek";
-            this.buttonDodajWydatek.Size = new System.Drawing.Size(423, 76);
+            this.buttonDodajWydatek.Size = new System.Drawing.Size(372, 76);
             this.buttonDodajWydatek.TabIndex = 1;
             this.buttonDodajWydatek.Text = "Dodaj wydatek";
             this.buttonDodajWydatek.UseVisualStyleBackColor = true;
@@ -163,12 +164,12 @@
             // 
             this.buttonDodajPrzychód.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDodajPrzychód.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.buttonDodajPrzychód.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonDodajPrzychód.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.buttonDodajPrzychód.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDodajPrzychód.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonDodajPrzychód.Location = new System.Drawing.Point(3, 37);
+            this.buttonDodajPrzychód.Location = new System.Drawing.Point(54, 41);
             this.buttonDodajPrzychód.Name = "buttonDodajPrzychód";
-            this.buttonDodajPrzychód.Size = new System.Drawing.Size(423, 76);
+            this.buttonDodajPrzychód.Size = new System.Drawing.Size(372, 76);
             this.buttonDodajPrzychód.TabIndex = 0;
             this.buttonDodajPrzychód.Text = "Dodaj przychód";
             this.buttonDodajPrzychód.UseVisualStyleBackColor = true;
@@ -185,7 +186,8 @@
             // 
             // splitContainerMenuBoczneWidok.Panel1
             // 
-            this.splitContainerMenuBoczneWidok.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.splitContainerMenuBoczneWidok.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainerMenuBoczneWidok.Panel1.BackgroundImage = global::WindowsFormsApp2.Properties.Resources.shoppingCartScreen;
             this.splitContainerMenuBoczneWidok.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainerMenuBoczneWidok.Panel1.Controls.Add(this.comboBoxKategoria);
             this.splitContainerMenuBoczneWidok.Panel1.Controls.Add(this.checkBoxCykliczny);
@@ -203,8 +205,8 @@
             this.splitContainerMenuBoczneWidok.Panel2.Controls.Add(this.buttonWidokKolowy);
             this.splitContainerMenuBoczneWidok.Panel2.Controls.Add(this.buttonWidokKalendarz);
             this.splitContainerMenuBoczneWidok.Panel2.Controls.Add(this.buttonWidokLiniowy);
-            this.splitContainerMenuBoczneWidok.Size = new System.Drawing.Size(350, 741);
-            this.splitContainerMenuBoczneWidok.SplitterDistance = 369;
+            this.splitContainerMenuBoczneWidok.Size = new System.Drawing.Size(350, 628);
+            this.splitContainerMenuBoczneWidok.SplitterDistance = 345;
             this.splitContainerMenuBoczneWidok.TabIndex = 0;
             // 
             // comboBoxKategoria
@@ -219,25 +221,12 @@
             this.comboBoxKategoria.Text = "Wybierz kategorię";
             this.comboBoxKategoria.Click += new System.EventHandler(this.comboBoxKategoria_Click);
             // 
-            // checkBoxCykliczny
-            // 
-            this.checkBoxCykliczny.AutoSize = true;
-            this.checkBoxCykliczny.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.checkBoxCykliczny.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBoxCykliczny.Location = new System.Drawing.Point(54, 24);
-            this.checkBoxCykliczny.Name = "checkBoxCykliczny";
-            this.checkBoxCykliczny.Size = new System.Drawing.Size(254, 23);
-            this.checkBoxCykliczny.TabIndex = 7;
-            this.checkBoxCykliczny.Text = "Ustaw jako przychód cykliczny";
-            this.checkBoxCykliczny.UseVisualStyleBackColor = false;
-            // 
             // buttonReset
             // 
-            this.buttonReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonReset.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.buttonReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.buttonReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonReset.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonReset.Location = new System.Drawing.Point(51, 306);
@@ -245,16 +234,15 @@
             this.buttonReset.Size = new System.Drawing.Size(172, 43);
             this.buttonReset.TabIndex = 6;
             this.buttonReset.Text = "Resetuj";
-            this.buttonReset.UseVisualStyleBackColor = false;
+            this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
             // buttonZapisz
             // 
-            this.buttonZapisz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonZapisz.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonZapisz.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.buttonZapisz.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.buttonZapisz.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonZapisz.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonZapisz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonZapisz.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonZapisz.Location = new System.Drawing.Point(254, 306);
@@ -262,7 +250,7 @@
             this.buttonZapisz.Size = new System.Drawing.Size(172, 43);
             this.buttonZapisz.TabIndex = 5;
             this.buttonZapisz.Text = "Zapisz";
-            this.buttonZapisz.UseVisualStyleBackColor = false;
+            this.buttonZapisz.UseVisualStyleBackColor = true;
             // 
             // richTextBoxDodaj
             // 
@@ -376,8 +364,8 @@
             // splitContainerFiltr.Panel1
             // 
             this.splitContainerFiltr.Panel1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.splitContainerFiltr.Panel1.Controls.Add(this.buttonPowiadomienia);
-            this.splitContainerFiltr.Panel1.Controls.Add(this.comboBoxFiltrUzytkownik);
+            this.splitContainerFiltr.Panel1.Controls.Add(this.pictureBoxWyloguj);
+            this.splitContainerFiltr.Panel1.Controls.Add(this.pictureBoxUstawienia);
             this.splitContainerFiltr.Panel1.Controls.Add(this.textBoxSzukajWOpisie);
             this.splitContainerFiltr.Panel1.Controls.Add(this.buttonWyszukaj);
             this.splitContainerFiltr.Panel1.Controls.Add(this.labelSzukajWOpisie);
@@ -398,41 +386,9 @@
             // splitContainerFiltr.Panel2
             // 
             this.splitContainerFiltr.Panel2.Controls.Add(this.splitContainerSaldo);
-            this.splitContainerFiltr.Size = new System.Drawing.Size(1554, 945);
+            this.splitContainerFiltr.Size = new System.Drawing.Size(991, 832);
             this.splitContainerFiltr.SplitterDistance = 80;
             this.splitContainerFiltr.TabIndex = 0;
-            // 
-            // buttonPowiadomienia
-            // 
-            this.buttonPowiadomienia.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonPowiadomienia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonPowiadomienia.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPowiadomienia.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonPowiadomienia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonPowiadomienia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lavender;
-            this.buttonPowiadomienia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPowiadomienia.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonPowiadomienia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPowiadomienia.Location = new System.Drawing.Point(127, 3);
-            this.buttonPowiadomienia.Name = "buttonPowiadomienia";
-            this.buttonPowiadomienia.Size = new System.Drawing.Size(234, 34);
-            this.buttonPowiadomienia.TabIndex = 26;
-            this.buttonPowiadomienia.Text = "Powiadomienia";
-            this.buttonPowiadomienia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonPowiadomienia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonPowiadomienia.UseCompatibleTextRendering = true;
-            this.buttonPowiadomienia.UseVisualStyleBackColor = false;
-            // 
-            // comboBoxFiltrUzytkownik
-            // 
-            this.comboBoxFiltrUzytkownik.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.comboBoxFiltrUzytkownik.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBoxFiltrUzytkownik.FormattingEnabled = true;
-            this.comboBoxFiltrUzytkownik.Location = new System.Drawing.Point(190, 53);
-            this.comboBoxFiltrUzytkownik.Name = "comboBoxFiltrUzytkownik";
-            this.comboBoxFiltrUzytkownik.Size = new System.Drawing.Size(159, 27);
-            this.comboBoxFiltrUzytkownik.TabIndex = 24;
-            this.comboBoxFiltrUzytkownik.Text = "Wybierz użytkownika";
             // 
             // textBoxSzukajWOpisie
             // 
@@ -544,11 +500,10 @@
             // 
             // dateTimePickerFiltrDo
             // 
-            this.dateTimePickerFiltrDo.CalendarFont = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePickerFiltrDo.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dateTimePickerFiltrDo.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dateTimePickerFiltrDo.Location = new System.Drawing.Point(800, 52);
             this.dateTimePickerFiltrDo.Name = "dateTimePickerFiltrDo";
-            this.dateTimePickerFiltrDo.Size = new System.Drawing.Size(334, 25);
+            this.dateTimePickerFiltrDo.Size = new System.Drawing.Size(334, 27);
             this.dateTimePickerFiltrDo.TabIndex = 11;
             // 
             // labelOdData
@@ -563,11 +518,10 @@
             // 
             // dateTimePickerFiltrOd
             // 
-            this.dateTimePickerFiltrOd.CalendarFont = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePickerFiltrOd.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dateTimePickerFiltrOd.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dateTimePickerFiltrOd.Location = new System.Drawing.Point(394, 52);
             this.dateTimePickerFiltrOd.Name = "dateTimePickerFiltrOd";
-            this.dateTimePickerFiltrOd.Size = new System.Drawing.Size(334, 25);
+            this.dateTimePickerFiltrOd.Size = new System.Drawing.Size(334, 27);
             this.dateTimePickerFiltrOd.TabIndex = 10;
             // 
             // comboBoxFiltrWyborOperacji
@@ -575,50 +529,44 @@
             this.comboBoxFiltrWyborOperacji.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.comboBoxFiltrWyborOperacji.ForeColor = System.Drawing.Color.DimGray;
             this.comboBoxFiltrWyborOperacji.FormattingEnabled = true;
-            this.comboBoxFiltrWyborOperacji.Location = new System.Drawing.Point(25, 52);
+            this.comboBoxFiltrWyborOperacji.Location = new System.Drawing.Point(61, 52);
             this.comboBoxFiltrWyborOperacji.Name = "comboBoxFiltrWyborOperacji";
-            this.comboBoxFiltrWyborOperacji.Size = new System.Drawing.Size(159, 27);
+            this.comboBoxFiltrWyborOperacji.Size = new System.Drawing.Size(262, 27);
             this.comboBoxFiltrWyborOperacji.TabIndex = 3;
             this.comboBoxFiltrWyborOperacji.Text = "Wybierz operację";
             this.comboBoxFiltrWyborOperacji.Click += new System.EventHandler(this.comboBoxFiltrWyborOperacji_Click);
             // 
             // buttonUstawienia
             // 
-            this.buttonUstawienia.BackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonUstawienia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonUstawienia.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
             this.buttonUstawienia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonUstawienia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lavender;
+            this.buttonUstawienia.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonUstawienia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUstawienia.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonUstawienia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUstawienia.Location = new System.Drawing.Point(394, 5);
+            this.buttonUstawienia.Location = new System.Drawing.Point(1260, 0);
             this.buttonUstawienia.Name = "buttonUstawienia";
-            this.buttonUstawienia.Size = new System.Drawing.Size(239, 34);
+            this.buttonUstawienia.Size = new System.Drawing.Size(150, 34);
             this.buttonUstawienia.TabIndex = 1;
-            this.buttonUstawienia.Text = "Panel administratora";
+            this.buttonUstawienia.Text = "Ustawienia";
             this.buttonUstawienia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonUstawienia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonUstawienia.UseCompatibleTextRendering = true;
-            this.buttonUstawienia.UseVisualStyleBackColor = false;
+            this.buttonUstawienia.UseVisualStyleBackColor = true;
             // 
             // buttonWyloguj
             // 
-            this.buttonWyloguj.BackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonWyloguj.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonWyloguj.FlatAppearance.BorderColor = System.Drawing.Color.LightSteelBlue;
             this.buttonWyloguj.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.buttonWyloguj.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lavender;
+            this.buttonWyloguj.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonWyloguj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonWyloguj.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonWyloguj.Location = new System.Drawing.Point(701, 3);
+            this.buttonWyloguj.Location = new System.Drawing.Point(1426, 0);
             this.buttonWyloguj.Name = "buttonWyloguj";
-            this.buttonWyloguj.Size = new System.Drawing.Size(154, 34);
+            this.buttonWyloguj.Size = new System.Drawing.Size(150, 34);
             this.buttonWyloguj.TabIndex = 0;
             this.buttonWyloguj.Text = "Wyloguj się";
             this.buttonWyloguj.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonWyloguj.UseVisualStyleBackColor = false;
-            this.buttonWyloguj.Click += new System.EventHandler(this.buttonWyloguj_Click);
+            this.buttonWyloguj.UseVisualStyleBackColor = true;
             // 
             // splitContainerSaldo
             // 
@@ -639,7 +587,7 @@
             // splitContainerSaldo.Panel2
             // 
             this.splitContainerSaldo.Panel2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.splitContainerSaldo.Size = new System.Drawing.Size(1554, 861);
+            this.splitContainerSaldo.Size = new System.Drawing.Size(991, 748);
             this.splitContainerSaldo.SplitterDistance = 650;
             this.splitContainerSaldo.TabIndex = 0;
             // 
@@ -657,19 +605,19 @@
             // 
             // chartGlowny
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartGlowny.ChartAreas.Add(chartArea1);
+            chartArea44.Name = "ChartArea1";
+            this.chartGlowny.ChartAreas.Add(chartArea44);
             this.chartGlowny.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartGlowny.Legends.Add(legend1);
+            legend44.Name = "Legend1";
+            this.chartGlowny.Legends.Add(legend44);
             this.chartGlowny.Location = new System.Drawing.Point(0, 0);
             this.chartGlowny.Name = "chartGlowny";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartGlowny.Series.Add(series1);
-            this.chartGlowny.Size = new System.Drawing.Size(1554, 650);
+            series44.ChartArea = "ChartArea1";
+            series44.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series44.Legend = "Legend1";
+            series44.Name = "Series1";
+            this.chartGlowny.Series.Add(series44);
+            this.chartGlowny.Size = new System.Drawing.Size(991, 650);
             this.chartGlowny.TabIndex = 3;
             this.chartGlowny.Text = "chart1";
             this.chartGlowny.Visible = false;
@@ -678,8 +626,7 @@
             // 
             this.listViewGlowne.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ID,
-            this.columnUżytkownicy,
-            this.columnOperacja,
+            this.columnOperacj,
             this.columnKwota,
             this.columnData,
             this.columnKategoria,
@@ -690,7 +637,7 @@
             this.listViewGlowne.HideSelection = false;
             this.listViewGlowne.Location = new System.Drawing.Point(0, 0);
             this.listViewGlowne.Name = "listViewGlowne";
-            this.listViewGlowne.Size = new System.Drawing.Size(1554, 650);
+            this.listViewGlowne.Size = new System.Drawing.Size(991, 650);
             this.listViewGlowne.TabIndex = 2;
             this.listViewGlowne.UseCompatibleStateImageBehavior = false;
             this.listViewGlowne.View = System.Windows.Forms.View.Details;
@@ -700,17 +647,11 @@
             this.ID.Text = "";
             this.ID.Width = 0;
             // 
-            // columnUżytkownicy
+            // columnOperacj
             // 
-            this.columnUżytkownicy.Text = "Użytkownik";
-            this.columnUżytkownicy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnUżytkownicy.Width = 200;
-            // 
-            // columnOperacja
-            // 
-            this.columnOperacja.Text = "Operacja";
-            this.columnOperacja.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnOperacja.Width = 150;
+            this.columnOperacj.Text = "Operacja";
+            this.columnOperacj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnOperacj.Width = 200;
             // 
             // columnKwota
             // 
@@ -722,7 +663,7 @@
             // 
             this.columnData.Text = "Data";
             this.columnData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnData.Width = 150;
+            this.columnData.Width = 200;
             // 
             // columnKategoria
             // 
@@ -742,24 +683,54 @@
             this.listViewGlowny.HideSelection = false;
             this.listViewGlowny.Location = new System.Drawing.Point(0, 0);
             this.listViewGlowny.Name = "listViewGlowny";
-            this.listViewGlowny.Size = new System.Drawing.Size(1554, 650);
+            this.listViewGlowny.Size = new System.Drawing.Size(991, 650);
             this.listViewGlowny.TabIndex = 0;
             this.listViewGlowny.UseCompatibleStateImageBehavior = false;
+            // 
+            // checkBoxCykliczny
+            // 
+            this.checkBoxCykliczny.AutoSize = true;
+            this.checkBoxCykliczny.BackgroundImage = global::WindowsFormsApp2.Properties.Resources.moneyScreen;
+            this.checkBoxCykliczny.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.checkBoxCykliczny.Location = new System.Drawing.Point(54, 24);
+            this.checkBoxCykliczny.Name = "checkBoxCykliczny";
+            this.checkBoxCykliczny.Size = new System.Drawing.Size(254, 23);
+            this.checkBoxCykliczny.TabIndex = 7;
+            this.checkBoxCykliczny.Text = "Ustaw jako przychód cykliczny";
+            this.checkBoxCykliczny.UseVisualStyleBackColor = true;
+            // 
+            // pictureBoxWyloguj
+            // 
+            this.pictureBoxWyloguj.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxWyloguj.Image = global::WindowsFormsApp2.Properties.Resources.logOutIcon;
+            this.pictureBoxWyloguj.Location = new System.Drawing.Point(1432, 4);
+            this.pictureBoxWyloguj.Name = "pictureBoxWyloguj";
+            this.pictureBoxWyloguj.Size = new System.Drawing.Size(27, 27);
+            this.pictureBoxWyloguj.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxWyloguj.TabIndex = 23;
+            this.pictureBoxWyloguj.TabStop = false;
+            // 
+            // pictureBoxUstawienia
+            // 
+            this.pictureBoxUstawienia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxUstawienia.Image = global::WindowsFormsApp2.Properties.Resources.SettingIcon;
+            this.pictureBoxUstawienia.Location = new System.Drawing.Point(1270, 5);
+            this.pictureBoxUstawienia.Name = "pictureBoxUstawienia";
+            this.pictureBoxUstawienia.Size = new System.Drawing.Size(26, 23);
+            this.pictureBoxUstawienia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUstawienia.TabIndex = 8;
+            this.pictureBoxUstawienia.TabStop = false;
             // 
             // panelGlowny
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1908, 945);
+            this.ClientSize = new System.Drawing.Size(1345, 832);
             this.Controls.Add(this.splitContainerGlowny);
             this.Name = "panelGlowny";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Budżet domowy";
+            this.Text = "panelGlowny";
             this.Activated += new System.EventHandler(this.panelGlowny_Activated);
             this.Load += new System.EventHandler(this.panelGlowny_Load);
-            this.SizeChanged += new System.EventHandler(this.panelGlowny_SizeChanged);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelGlowny_MouseClick);
             this.splitContainerGlowny.Panel1.ResumeLayout(false);
             this.splitContainerGlowny.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerGlowny)).EndInit();
@@ -783,6 +754,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerSaldo)).EndInit();
             this.splitContainerSaldo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartGlowny)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWyloguj)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUstawienia)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -832,10 +805,9 @@
         private System.Windows.Forms.ColumnHeader columnKategoria;
         private System.Windows.Forms.ColumnHeader columnOpis;
         private System.Windows.Forms.ColumnHeader ID;
-        private System.Windows.Forms.ColumnHeader columnOperacja;
+        private System.Windows.Forms.ColumnHeader columnOperacj;
         private System.Windows.Forms.Button buttonWidokTabelka;
-        private System.Windows.Forms.ComboBox comboBoxFiltrUzytkownik;
-        private System.Windows.Forms.Button buttonPowiadomienia;
-        private System.Windows.Forms.ColumnHeader columnUżytkownicy;
+        private System.Windows.Forms.PictureBox pictureBoxUstawienia;
+        private System.Windows.Forms.PictureBox pictureBoxWyloguj;
     }
 }

@@ -30,156 +30,6 @@ namespace WindowsFormsApp2
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void panelGlowny_SizeChanged(object sender, EventArgs e)
-        {
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-
-            // Ustawienia panelu bocznego
-            {
-                splitContainerGlowny.SplitterDistance = this.ClientSize.Width / 4;
-
-                // Wielkosc i lokalizacja przyciskow DodajPrzychod i DodajWydatek
-                {
-                    buttonDodajPrzychód.Height = this.ClientSize.Height / 13;
-                    buttonDodajWydatek.Height = this.ClientSize.Height / 13;
-                    buttonDodajPrzychód.Width = this.ClientSize.Width / 5;
-                    buttonDodajWydatek.Width = this.ClientSize.Width / 5;
-
-                    buttonDodajPrzychód.Left = (splitContainerMenuBoczne.Panel1.Width - buttonDodajPrzychód.Width) / 2;
-                    buttonDodajWydatek.Left = (splitContainerMenuBoczne.Panel1.Width - buttonDodajWydatek.Width) / 2;
-                    buttonDodajPrzychód.Top = this.ClientSize.Height / 28;
-                    buttonDodajWydatek.Top = buttonDodajPrzychód.Height + 50;
-                }
-
-                // Wielkosc i lokalizacja kontrolek w panelu dodawania przychodów i wydatków
-                {
-                    splitContainerMenuBoczne.SplitterDistance = this.ClientSize.Height / 4;
-
-                    textBoxDodajKwote.Height = this.ClientSize.Height / 20;
-                    dateTimePickerDodajOperacje.Height = this.ClientSize.Height / 20;
-                    comboBoxKategoria.Height = this.ClientSize.Height / 20;
-                    richTextBoxDodaj.Height = this.ClientSize.Height / 20;
-                    buttonReset.Height = this.ClientSize.Height / 20;
-                    buttonZapisz.Height = this.ClientSize.Height / 20;
-
-                    textBoxDodajKwote.Width = this.ClientSize.Width / 5;
-                    dateTimePickerDodajOperacje.Width = this.ClientSize.Width / 5;
-                    comboBoxKategoria.Width = this.ClientSize.Width / 5;
-                    richTextBoxDodaj.Width = this.ClientSize.Width / 5;
-                    buttonReset.Width = this.ClientSize.Width / 11;
-                    buttonZapisz.Width = this.ClientSize.Width / 11;
-
-                    textBoxDodajKwote.Left = (splitContainerMenuBoczne.Panel1.Width - textBoxDodajKwote.Width) / 2;
-                    dateTimePickerDodajOperacje.Left = (splitContainerMenuBoczne.Panel1.Width - dateTimePickerDodajOperacje.Width) / 2;
-                    comboBoxKategoria.Left = (splitContainerMenuBoczne.Panel1.Width - comboBoxKategoria.Width) / 2;
-                    richTextBoxDodaj.Left = (splitContainerMenuBoczne.Panel1.Width - richTextBoxDodaj.Width) / 2;
-                    buttonReset.Left = (splitContainerMenuBoczne.Panel1.Width - buttonReset.Width) / 6;
-                    buttonZapisz.Left = buttonReset.Left + buttonZapisz.Width + (buttonZapisz.Width / 5);
-
-                    textBoxDodajKwote.Top = this.ClientSize.Height / 24;
-                    dateTimePickerDodajOperacje.Top = textBoxDodajKwote.Top + dateTimePickerDodajOperacje.Height + (dateTimePickerDodajOperacje.Height/2) + 5;
-                    comboBoxKategoria.Top = dateTimePickerDodajOperacje.Top + comboBoxKategoria.Height + (comboBoxKategoria.Height / 2) + 5;
-                    richTextBoxDodaj.Top = comboBoxKategoria.Top + comboBoxKategoria.Height + (comboBoxKategoria.Height / 2) + 5;
-                    checkBoxCykliczny.Top = richTextBoxDodaj.Top + richTextBoxDodaj.Height + (comboBoxKategoria.Height / 2) + 5;
-                }
-
-                // Wielkosc i lokalizacja przyciskow w panelu wybierania widoku
-                {
-                    splitContainerMenuBoczneWidok.SplitterDistance = buttonReset.Top + (buttonReset.Top / 4);
-
-                    buttonWidokTabelka.Height = splitContainerMenuBoczneWidok.Panel2.Height / 6;
-                    buttonWidokKalendarz.Height = splitContainerMenuBoczneWidok.Panel2.Height / 6;
-                    buttonWidokLiniowy.Height = splitContainerMenuBoczneWidok.Panel2.Height / 6;
-                    buttonWidokKolumnowy.Height = splitContainerMenuBoczneWidok.Panel2.Height / 6;
-                    buttonWidokKolowy.Height = splitContainerMenuBoczneWidok.Panel2.Height / 6;
-
-                    buttonWidokTabelka.Width = splitContainerMenuBoczneWidok.Panel2.Width - 10;
-                    buttonWidokKalendarz.Width = splitContainerMenuBoczneWidok.Panel2.Width - 10;
-                    buttonWidokLiniowy.Width = splitContainerMenuBoczneWidok.Panel2.Width - 10;
-                    buttonWidokKolumnowy.Width = splitContainerMenuBoczneWidok.Panel2.Width - 10;
-                    buttonWidokKolowy.Width = splitContainerMenuBoczneWidok.Panel2.Width - 10;
-
-                    buttonWidokTabelka.Left = (splitContainerMenuBoczneWidok.Panel2.Width - buttonWidokTabelka.Width) / 2 + 1;
-                    buttonWidokKalendarz.Left = (splitContainerMenuBoczneWidok.Panel2.Width - buttonWidokKalendarz.Width) / 2 + 1;
-                    buttonWidokLiniowy.Left = (splitContainerMenuBoczneWidok.Panel2.Width - buttonWidokLiniowy.Width) / 2 + 1;
-                    buttonWidokKolumnowy.Left = (splitContainerMenuBoczneWidok.Panel2.Width - buttonWidokKolumnowy.Width) / 2 + 1;
-                    buttonWidokKolowy.Left = (splitContainerMenuBoczneWidok.Panel2.Width - buttonWidokKolowy.Width) / 2 + 1;
-
-                    buttonWidokTabelka.Top = this.ClientSize.Height / 90;
-                    buttonWidokKalendarz.Top = buttonWidokTabelka.Top + buttonWidokKalendarz.Height + (buttonWidokKalendarz.Height / 6);
-                    buttonWidokLiniowy.Top = buttonWidokKalendarz.Top + buttonWidokLiniowy.Height + (buttonWidokLiniowy.Height / 6);
-                    buttonWidokKolumnowy.Top = buttonWidokLiniowy.Top + buttonWidokKolumnowy.Height + (buttonWidokKolumnowy.Height / 6);
-                    buttonWidokKolowy.Top = buttonWidokKolumnowy.Top + buttonWidokKolowy.Height + (buttonWidokKolowy.Height / 6);
-                }
-
-                // Wielkosc i lokalizacja kontrolek w gornym panelu filtrowania
-                {
-                    splitContainerFiltr.SplitterDistance = this.ClientSize.Height / 10;
-
-                    comboBoxFiltrWyborOperacji.Width = splitContainerFiltr.Panel1.Width / 7;
-                    comboBoxFiltrUzytkownik.Width = splitContainerFiltr.Panel1.Width / 7;
-                    dateTimePickerFiltrOd.Width = splitContainerFiltr.Panel1.Width / 5;
-                    dateTimePickerFiltrDo.Width = splitContainerFiltr.Panel1.Width / 5;
-
-                    comboBoxFiltrWyborOperacji.Left = splitContainerFiltr.Panel1.Width / 50;
-                    comboBoxFiltrUzytkownik.Left = splitContainerFiltr.Panel1.Width / 6 + (labelDoData.Width / 2);
-                    labelOdData.Left = comboBoxFiltrUzytkownik.Left + comboBoxFiltrUzytkownik.Width + (labelOdData.Width / 4);
-                    dateTimePickerFiltrOd.Left = labelOdData.Left + labelOdData.Width + (labelOdData.Width / 4);
-                    labelDoData.Left = dateTimePickerFiltrOd.Left + dateTimePickerFiltrOd.Width + (labelDoData.Width / 4);
-                    dateTimePickerFiltrDo.Left = labelDoData.Left + labelDoData.Width + (labelDoData.Width / 4);
-                    checkBoxFiltrZaawansowany.Left = dateTimePickerFiltrDo.Left + dateTimePickerFiltrDo.Width + (labelDoData.Width / 2);
-
-                    comboBoxFiltrWyborOperacji.Top = splitContainerFiltr.Panel1.Height / 2;
-                    comboBoxFiltrUzytkownik.Top = splitContainerFiltr.Panel1.Height / 2;
-                    labelOdData.Top = splitContainerFiltr.Panel1.Height / 2 + 6;
-                    dateTimePickerFiltrOd.Top = splitContainerFiltr.Panel1.Height / 2 + 3;
-                    labelDoData.Top = splitContainerFiltr.Panel1.Height / 2 + 6;
-                    dateTimePickerFiltrDo.Top = splitContainerFiltr.Panel1.Height / 2 + 3;
-                    checkBoxFiltrZaawansowany.Top = splitContainerFiltr.Panel1.Height / 2 + 5;
-
-                    // Filtr zaawansowany
-
-                    comboBoxFiltrKategoria.Width = splitContainerFiltr.Panel1.Width / 7;
-                    textBoxFiltrKwotaOd.Width = splitContainerFiltr.Panel1.Width / 8 - 3;
-                    textBoxFiltrKwotaDo.Width = splitContainerFiltr.Panel1.Width / 8 - 3;
-                    textBoxSzukajWOpisie.Width = splitContainerFiltr.Panel1.Width / 5;
-                    buttonWyszukaj.Width = splitContainerFiltr.Panel1.Width / 8;
-
-                    comboBoxFiltrKategoria.Left = splitContainerFiltr.Panel1.Width / 50;
-                    labelOdKwota.Left = comboBoxFiltrKategoria.Left + comboBoxFiltrKategoria.Width + (labelOdKwota.Width / 4);
-                    textBoxFiltrKwotaOd.Left = labelOdKwota.Left + labelOdKwota.Width + (labelOdKwota.Width / 4);
-                    labelDoKwota.Left = textBoxFiltrKwotaOd.Left + textBoxFiltrKwotaOd.Width + (labelOdKwota.Width / 4);
-                    textBoxFiltrKwotaDo.Left = labelDoKwota.Left + labelDoKwota.Width + (labelOdKwota.Width / 4);
-                    labelSzukajWOpisie.Left = textBoxFiltrKwotaDo.Left + textBoxFiltrKwotaDo.Width + (labelDoKwota.Width / 2);
-                    textBoxSzukajWOpisie.Left = labelSzukajWOpisie.Left + labelSzukajWOpisie.Width + (labelDoKwota.Width / 3) - 2;
-                    buttonWyszukaj.Left = textBoxSzukajWOpisie.Left + textBoxSzukajWOpisie.Width + labelDoKwota.Width + 5;
-
-                    comboBoxFiltrKategoria.Top = comboBoxFiltrWyborOperacji.Top + comboBoxFiltrWyborOperacji.Height + (labelDoData.Width / 2) + (labelDoData.Width / 4);
-                    labelOdKwota.Top = comboBoxFiltrWyborOperacji.Top + comboBoxFiltrWyborOperacji.Height + (labelDoData.Width / 2) + (labelDoData.Width / 4) + 6;
-                    textBoxFiltrKwotaOd.Top = comboBoxFiltrWyborOperacji.Top + comboBoxFiltrWyborOperacji.Height + (labelDoData.Width / 2) + (labelDoData.Width / 4) + 1;
-                    labelDoKwota.Top = comboBoxFiltrWyborOperacji.Top + comboBoxFiltrWyborOperacji.Height + (labelDoData.Width / 2) + (labelDoData.Width / 4) + 6;
-                    textBoxFiltrKwotaDo.Top = comboBoxFiltrWyborOperacji.Top + comboBoxFiltrWyborOperacji.Height + (labelDoData.Width / 2) + (labelDoData.Width / 4) + 1;
-                    labelSzukajWOpisie.Top = comboBoxFiltrWyborOperacji.Top + comboBoxFiltrWyborOperacji.Height + (labelDoData.Width / 2) + (labelDoData.Width / 4) + 6;
-                    textBoxSzukajWOpisie.Top = comboBoxFiltrWyborOperacji.Top + comboBoxFiltrWyborOperacji.Height + (labelDoData.Width / 2) + (labelDoData.Width / 4) + 1;
-                    buttonWyszukaj.Top = comboBoxFiltrWyborOperacji.Top + comboBoxFiltrWyborOperacji.Height + (labelDoData.Width / 2) + (labelDoData.Width / 4);
-
-                    // Górne przyciski
-
-                    buttonWyloguj.Width = splitContainerFiltr.Panel1.Width / 11;
-                    buttonUstawienia.Width = splitContainerFiltr.Panel1.Width / 7;
-                    buttonPowiadomienia.Width = splitContainerFiltr.Panel1.Width / 9;
-
-                    buttonWyloguj.Left = splitContainerFiltr.Panel1.Width - buttonWyloguj.Width;
-                    buttonUstawienia.Left = buttonWyloguj.Left - buttonUstawienia.Width;
-                    buttonPowiadomienia.Left = buttonUstawienia.Left - buttonPowiadomienia.Width;
-
-                    buttonWyloguj.Top = splitContainerFiltr.Panel1.Top;
-                    buttonUstawienia.Top = splitContainerFiltr.Panel1.Top;
-                    buttonPowiadomienia.Top = splitContainerFiltr.Panel1.Top;
-                }
-            }
-        }
-
         private void checkBoxFiltrZaawansowany_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox c = (CheckBox)sender as CheckBox;
@@ -221,10 +71,8 @@ namespace WindowsFormsApp2
 
         private void trybDodajPrzychod()
         {
-            splitContainerMenuBoczneWidok.Panel1.BackColor = Color.FromArgb(128, 255, 170);
-            checkBoxCykliczny.BackColor = Color.FromArgb(128, 255, 170);
-            buttonReset.BackColor = Color.FromArgb(230, 255, 230);
-            buttonZapisz.BackColor = Color.FromArgb(230, 255, 230);
+            splitContainerMenuBoczneWidok.Panel1.BackgroundImage = WindowsFormsApp2.Properties.Resources.moneyScreen;
+            checkBoxCykliczny.BackgroundImage = WindowsFormsApp2.Properties.Resources.moneyScreen;
             textBoxDodajKwote.Text = "Dodaj kwotę przychodu";
             textBoxDodajKwote.ForeColor = Color.DimGray;
             trybPrzychod = true;
@@ -232,10 +80,8 @@ namespace WindowsFormsApp2
 
         private void trybDodajWydatek()
         {
-            splitContainerMenuBoczneWidok.Panel1.BackColor = Color.FromArgb(255, 128, 128);
-            checkBoxCykliczny.BackColor = Color.FromArgb(255, 128, 128);
-            buttonReset.BackColor = Color.FromArgb(255, 230, 230);
-            buttonZapisz.BackColor = Color.FromArgb(255, 230, 230);
+            splitContainerMenuBoczneWidok.Panel1.BackgroundImage = WindowsFormsApp2.Properties.Resources.shoppingCartScreen;
+            checkBoxCykliczny.BackgroundImage = WindowsFormsApp2.Properties.Resources.shoppingCartScreen;
             textBoxDodajKwote.Text = "Dodaj kwotę wydatku";
             textBoxDodajKwote.ForeColor = Color.DimGray;
             trybPrzychod = false;
@@ -385,14 +231,6 @@ namespace WindowsFormsApp2
         private void panelGlowny_MouseClick(object sender, MouseEventArgs e)
         {
 
-        }
-
-        private void buttonWyloguj_Click(object sender, EventArgs e)
-        {
-
-            panelLogowania PL = new panelLogowania();
-            this.Hide();
-            PL.ShowDialog();
         }
     }
 }
