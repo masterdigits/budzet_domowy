@@ -227,5 +227,10 @@ namespace WindowsFormsApp2
                 textBoxFiltrKwotaDo.ForeColor = Color.Black;
             }
         }
+
+        private void panelGlowny_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
