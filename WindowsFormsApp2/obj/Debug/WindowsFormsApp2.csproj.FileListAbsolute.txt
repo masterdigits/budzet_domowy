@@ -10,3 +10,14 @@ C:\Users\micha\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsF
 C:\Users\maste\Downloads\budrzet\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
 C:\Users\maste\Downloads\budrzet\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\maste\Downloads\budrzet\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\mimimi\Documents\GitHub\budzet_domowy\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\mimimi\Documents\GitHub\budzet_domowy\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\mimimi\Documents\GitHub\budzet_domowy\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\mimimi\Documents\GitHub\budzet_domowy\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
+C:\Users\mimimi\Documents\GitHub\budzet_domowy\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.panelGlowny.resources
+C:\Users\mimimi\Documents\GitHub\budzet_domowy\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.panelLogowania.resources
+C:\Users\mimimi\Documents\GitHub\budzet_domowy\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\mimimi\Documents\GitHub\budzet_domowy\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\mimimi\Documents\GitHub\budzet_domowy\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\mimimi\Documents\GitHub\budzet_domowy\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\mimimi\Documents\GitHub\budzet_domowy\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
